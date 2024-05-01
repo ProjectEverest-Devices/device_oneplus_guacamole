@@ -11,11 +11,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from guacamole device
 $(call inherit-product, device/oneplus/guacamole/device.mk)
 
-# Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common Everest stuff.
+$(call inherit-product, vendor/everest/config/common_full_phone.mk)
+
+# Everest Flags
+EVEREST_MAINTAINER := ankit
+TARGET_SUPPORTS_BLUR := true
+EVEREST_UDFPS_ANIMATIONS := true
+WITH_GAPPS := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := yaap_guacamole
+PRODUCT_NAME := everest_guacamole
 PRODUCT_DEVICE := guacamole
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := GM1917
